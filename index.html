@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+    <title>USER REGISTERATION</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>REGISTER/SEARCH</h2>
+                <form name="form1" autocomplete="off" action="insert.php" method="post">
+                    <label for="fname">Firstname:</label>
+                    <input type="text" name="fname" required><br><br>
+                    <label for="lname">Lastname:&nbsp;</label>
+                    <input type="text" name="lname" required><br><br>
+                    <label for="uname">Username:</label>
+                    <input type="email" name="uname" required><br><br>
+                    <label for="pwrd">Password:&ensp;</label>
+                    <input type="password" name="pwrd" id="pwrd" required><br><br>
+                    <input type="checkbox" onclick="myfunction()">SHOW PASSWORD <br>
+                    <button type="submit" class="btn">REGISTER</button>
+                    <a href="search.html"><button type="button" class="btn">SEARCH</button></a>
+                </form>
+    </div>
+
+    <script>
+        function myfunction(){
+            var x = document.getElementById("pwrd");
+            if(x.type === "password"){
+                x.type = "text";
+            }
+            else{
+                x.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
